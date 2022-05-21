@@ -1,6 +1,7 @@
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -69,6 +70,7 @@ public class NioFileOrDir {
     }
 
     @Test
+    @Disabled
     void 파일_변경_감지() throws IOException, InterruptedException {
         WatchService watchService = FileSystems.getDefault().newWatchService();
         Path directory = Paths.get("./");
